@@ -46,12 +46,12 @@ username = userdata.get('GITHUB_USERNAME')
 
 # 3. Define Path & Clone
 # CHANGE 'Colab_Projects' to your preferred Drive folder
-drive_path = '/content/drive/MyDrive/Colab_Projects'
+drive_path = '/content/drive/MyDrive/PythonWorkspaces'
 os.makedirs(drive_path, exist_ok=True)
 os.chdir(drive_path)
 
-repo_name = "your-repo-name" # CHANGE THIS
-clone_url = f"https://{token}@[github.com/](https://github.com/){username}/{repo_name}.git"
+repo_name = "PythonForML" # CHANGE THIS
+clone_url = f"https://{token}@github.com/{username}/{repo_name}.git"
 
 !git clone {clone_url}
 print(f"✅ Cloned {repo_name} into {drive_path}")
